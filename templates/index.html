@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+<head><title>ChargePath Mail</title></head>
+<body>
+<h1>Inbox</h1>
+<ul>
+{% for email in emails %}
+<li><strong>{{ email.subject }}</strong> from {{ email.sender }} to {{ email.recipient }} on {{ email.timestamp }}<br>{{ email.body }}</li>
+{% else %}
+<li>No messages</li>
+{% endfor %}
+</ul>
+<a href="{{ url_for('compose') }}">Compose</a>
+</body>
+</html>
