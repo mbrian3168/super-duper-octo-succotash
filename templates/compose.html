@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+<head><title>Compose - ChargePath Mail</title></head>
+<body>
+<h1>Compose</h1>
+<form action="{{ url_for('send') }}" method="post">
+<label>From: <input type="email" name="sender" value="user@chargepath.co" required></label><br>
+<label>To: <input type="email" name="recipient" required></label><br>
+<label>Subject: <input type="text" name="subject" required></label><br>
+<label>Body:<br><textarea name="body" rows="10" cols="40" required></textarea></label><br>
+<button type="submit">Send</button>
+</form>
+<a href="{{ url_for('index') }}">Back to inbox</a>
+</body>
+</html>
